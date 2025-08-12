@@ -35,7 +35,7 @@ const io = new Server(server, {
   cors: {
     origin: [
       "http://localhost:5173",
-      "https://vidya-setu-frontend-ruddy.vercel.app",
+      "https://vidyasetu-frontend-t61d.vercel.app",
     ],
     methods: ["GET", "POST"],
     credentials: true,
