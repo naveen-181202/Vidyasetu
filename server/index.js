@@ -50,11 +50,15 @@ app.use((req, res, next) => {
 
 // Middleware
 app.use(express.json());
-app.use(
-  cors({
-    origin: "*",
-  })
-);
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://vidyasetu-frontend-t61d.vercel.app"
+];
+
+app.use(cors({
+  origin: allowedOrigins,
+  credentials: true // only if you need cookies/auth headers
+}));
 
 // Routes
 app.use("/api", userRoute);
